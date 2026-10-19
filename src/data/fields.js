@@ -1,23 +1,28 @@
+import futsalIndoor1 from "../assets/futsal_indoor1.jpg";
+import futsalOutdoor from "../assets/futsal_Outdoor.jpg";
+import badminIndoor1 from "../assets/badminton_indoor.jpg";
+import badminOutdoor from "../assets/badminton_outdoor1.jpg";
+
 export const fields = [
     {
         id: 1, name: "Lapangan Futsal A", sport: "Futsal", price: 150000,
         facilities: ["Parkir", "Toilet", "Kantin"],
-        image: "src/assets/futsal_indoor1.jpg"
+        image: futsalIndoor1,
     },
     {
         id: 2, name: "Lapangan Futsal B", sport: "Futsal", price: 120000,
         facilities: ["Parkir", "Toilet"],
-        image: "src/assets/futsal_outdoor.jpg"
+        image: futsalOutdoor,
     },
     {
         id: 3, name: "GOR Badminton 1", sport: "Badminton", price: 60000,
         facilities: ["AC", "Toilet", "Musholla"],
-        image: "src/assets/badminton_indoor.jpg"
+        image: badminIndoor1,
     },
     {
         id: 4, name: "Lapangan Badminton Outdoor", sport: "Badminton", price: 80000,
         facilities: ["Parkir", "Tribun"],
-        image: "src/assets/badminton_outdoor1.jpg"
+        image: badminOutdoor,
     },
     // bisa tambahkan jenis sport --> Basket
 ];
