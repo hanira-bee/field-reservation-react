@@ -1,6 +1,8 @@
 export const fields = [
     {
-        id: 1, name: "Lapangan Futsal A", sport: "Futsal", price: 150000, facilities: ["Parkir", "Toilet", "Kantin"], image: "https://picsum.photos/seed/futsal1/600/400"
+        id: 1, name: "Lapangan Futsal A", sport: "Futsal", price: 150000,
+        facilities: ["Parkir", "Toilet", "Kantin"],
+        image: "https://picsum.photos/seed/futsal1/600/400"
     },
     {
         id: 2, name: "Lapangan Futsal B", sport: "Futsal", price: 120000,
@@ -23,4 +25,4 @@ export const fields = [
 export const timeSlots = Array.from({ length: 13 }, (_, i) => {
     const h = String(i + 8).padStart(2, "0");
     return `${h}:00`;
-})
+});

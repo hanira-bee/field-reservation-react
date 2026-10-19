@@ -11,9 +11,9 @@ export default function FieldCard({ field }) {
                 </span>
                 <h3 className="font-semibold mt-2">{field.name}</h3>
                 <p className="text-gray-600 text-sm">
-                    Rp {field.price.roLocaleString("id-ID")} / jam
+                    Rp {field.price.toLocaleString("id-ID")} / jam
                 </p>
             </div>
         </Link>
-    )
+    );
 }
