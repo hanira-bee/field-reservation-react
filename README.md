@@ -1,16 +1,69 @@
-# React + Vite
+# FieldBook – Sports Field Reservation (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive frontend for booking sports fields (futsal, badminton, basketball). Users can browse fields, pick a date and time slots, and manage their reservations.
 
-Currently, two official plugins are available:
+This is the React version of my Laravel project: [field_reservation](https://github.com/hanira-bee/field_reservation).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **Live demo:** [field-reservation-react](https://field-reservation-react-vert.vercel.app/)
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Fields list | Field detail & booking | Reservation history |
+|---|---|---|
+| ![Fields list](src/assets/field-list.png) | ![Detail](src/assets/field-detail.png) | ![History](src/assets/history.png) |
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Browse fields** with search by name and filter by sport type
+- **Field detail** page with photo, price per hour, and facilities
+- **Date and time-slot picker**: already-booked slots are disabled
+- **Booking form** with validation and automatic total price calculation
+- **Reservation history** with status (confirmed / cancelled) and cancel action
+- Data persists in the browser via `localStorage` (no backend required)
+- Responsive layout (mobile and desktop)
+
+## Tech Stack
+
+- [React](https://react.dev/) + [Vite](https://vite.dev/)
+- [React Router](https://reactrouter.com/) for client-side routing
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- Custom hook (`useBookings`) for state and `localStorage` persistence
+
+## Project Structure
+
+```
+src/
+├── assets/        # field images
+├── components/    # Navbar, FieldCard, SlotPicker, BookingForm
+├── data/          # dummy field data and time slots
+├── hooks/         # useBookings (state + localStorage)
+├── pages/         # FieldsPage, FieldDetailPage, HistoryPage
+├── App.jsx
+└── main.jsx
+```
+
+## Getting Started
+
+```bash
+git clone https://github.com/hanira-bee/field-reservation-react.git
+cd field-reservation-react
+npm install
+npm run dev
+```
+
+Then open the address shown in the terminal (usually `http://localhost:5173`).
+
+## Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Notes
+
+This project uses mock data and `localStorage` instead of a real backend. The Laravel version contains the full-stack implementation (authentication, admin dashboard, MySQL).
+
+## Author
+
+**Hanira** – [GitHub](https://github.com/hanira-bee)
