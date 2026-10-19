@@ -14,8 +14,8 @@ export default function SlotPicker({ bookedSlots, selected, onSelect }) {
             onClick={() => onSelect(time)}
             className={`py-2 rounded border text-sm
               ${isBooked ? "bg-gray-200 text-gray-400 cursor-not-allowed" : ""}
-              ${isSelected ? "bg-green-600 text-white border-green-600" : ""}
-              ${!isBooked && !isSelected ? "bg-white hover:bg-green-50" : ""}`}
+              ${isSelected ? "bg-red-600 text-white border-red-600" : ""}
+              ${!isBooked && !isSelected ? "bg-white hover:bg-red-50" : ""}`}
           >
             {time}
           </button>

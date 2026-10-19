@@ -6,7 +6,7 @@ export default function FieldCard({ field }) {
             className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
             <img src={field.image} alt={field.name} className="w-full h-40 object-cover" />
             <div className="p-4">
-                <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+                <span className="text-xs bg-red-100 text-red-700 px-2 py-1 rounded">
                     {field.sport}
                 </span>
                 <h3 className="font-semibold mt-2">{field.name}</h3>

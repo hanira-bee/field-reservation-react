@@ -50,7 +50,7 @@ export default function BookingForm({ field, date, slots, onSubmit }) {
             </div>
 
             <button type="submit"
-                className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
+                className="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700">
                 Pesan Sekarang
             </button>
         </form>
