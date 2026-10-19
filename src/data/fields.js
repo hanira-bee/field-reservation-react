@@ -1,5 +1,5 @@
 import futsalIndoor1 from "../assets/futsal_indoor1.jpg";
-import futsalOutdoor from "../assets/futsal_Outdoor.jpg";
+import futsalOutdoor from "../assets/futsal_outdoor.jpg";
 import badminIndoor1 from "../assets/badminton_indoor.jpg";
 import badminOutdoor from "../assets/badminton_outdoor1.jpg";
 
