@@ -19,7 +19,8 @@ This is the React version of my Laravel project: [field_reservation](https://git
 - **Date and time-slot picker**: already-booked slots are disabled
 - **Booking form** with validation and automatic total price calculation
 - **Reservation history** with status (confirmed / cancelled) and cancel action
-- Data persists in the browser via `localStorage` (no backend required)
+- Field catalog and time slots are loaded from `public/fields.json`
+- Reservations persist in the browser via `localStorage`
 - Responsive layout (mobile and desktop)
 
 ## Tech Stack
@@ -27,16 +28,17 @@ This is the React version of my Laravel project: [field_reservation](https://git
 - [React](https://react.dev/) + [Vite](https://vite.dev/)
 - [React Router](https://reactrouter.com/) for client-side routing
 - [Tailwind CSS](https://tailwindcss.com/) for styling
-- Custom hook (`useBookings`) for state and `localStorage` persistence
+- Custom hooks (`useFields` and `useBookings`) for catalog loading and reservation persistence
 
 ## Project Structure
 
 ```
+public/
+├── fields/        # field images
+└── fields.json    # field catalog and time slots
 src/
-├── assets/        # field images
 ├── components/    # Navbar, FieldCard, SlotPicker, BookingForm
-├── data/          # dummy field data and time slots
-├── hooks/         # useBookings (state + localStorage)
+├── hooks/         # useFields (fetch), useBookings (localStorage)
 ├── pages/         # FieldsPage, FieldDetailPage, HistoryPage
 ├── App.jsx
 └── main.jsx
@@ -62,7 +64,7 @@ npm run preview
 
 ## Notes
 
-This project uses mock data and `localStorage` instead of a real backend. The Laravel version contains the full-stack implementation (authentication, admin dashboard, MySQL).
+The field catalog and time slots are fetched from a static JSON file in `public/`; reservations still use browser `localStorage` and are not sent to an API. The Laravel version contains the full-stack implementation (authentication, admin dashboard, MySQL).
 
 ## Author
 
