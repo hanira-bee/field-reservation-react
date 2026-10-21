@@ -1,0 +1,40 @@
+{
+  "fields": [
+    {
+      "id": 1,
+      "name": "Lapangan Futsal A",
+      "sport": "Futsal",
+      "price": 150000,
+      "facilities": ["Parkir", "Toilet", "Kantin"],
+      "image": "/fields/futsal_indoor1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Lapangan Futsal B",
+      "sport": "Futsal",
+      "price": 120000,
+      "facilities": ["Parkir", "Toilet"],
+      "image": "/fields/futsal_outdoor.jpg"
+    },
+    {
+      "id": 3,
+      "name": "GOR Badminton 1",
+      "sport": "Badminton",
+      "price": 60000,
+      "facilities": ["AC", "Toilet", "Musholla"],
+      "image": "/fields/badminton_indoor.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Lapangan Badminton Outdoor",
+      "sport": "Badminton",
+      "price": 80000,
+      "facilities": ["Parkir", "Tribun"],
+      "image": "/fields/badminton_outdoor1.jpg"
+    }
+  ],
+  "timeSlots": [
+    "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00",
+    "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"
+  ]
+}

@@ -1,6 +1,4 @@
-import { timeSlots } from "../data/fields";
-
-export default function SlotPicker({ bookedSlots, selected, onSelect }) {
+export default function SlotPicker({ timeSlots, bookedSlots, selected, onSelect }) {
   return (
     <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
       {timeSlots.map((time) => {

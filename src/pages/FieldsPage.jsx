@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { fields } from "../data/fields";
 import FieldCard from "../components/FieldCard";
 
-export default function FieldsPage() {
+export default function FieldsPage({ fields }) {
     // state: nilai filter. Kalau berubah, tampilan otomatis ter-update
     const [search, setSearch] = useState("");
     const [sport, setSport] = useState("Semua");

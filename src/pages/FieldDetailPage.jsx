@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { fields } from "../data/fields";
 import SlotPicker from "../components/SlotPicker";
 import BookingForm from "../components/BookingForm";
 
-export default function FieldDetailPage({ bookings, addBooking }) {
+export default function FieldDetailPage({ fields, timeSlots, bookings, addBooking }) {
     const { id } = useParams(); // ambil {id} dari URL
     const navigate = useNavigate();
     const field = fields.find((f) => f.id === Number(id));
@@ -66,7 +65,12 @@ export default function FieldDetailPage({ bookings, addBooking }) {
 
                 <div>
                     <label className="block font-semibold mb-1">Pilih Jam</label>
-                    <SlotPicker bookedSlots={bookedSlots} selected={selectedSlots} onSelect={toggleSlot} />
+                    <SlotPicker
+                        timeSlots={timeSlots}
+                        bookedSlots={bookedSlots}
+                        selected={selectedSlots}
+                        onSelect={toggleSlot}
+                    />
                 </div>
 
                 <BookingForm field={field} date={date} slots={selectedSlots} onSubmit={handleSubmit} />
